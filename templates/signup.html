@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+
+{% block title %} Sign up {% endblock title %}
+
+{% block main-content %}
+
+<div class="container mt-5">
+	<div class="row my-3">
+		<div class="col-sm-6 offset-sm-3">
+			<h3> Sign up </h3>
+			<hr>
+			<form method="POST" action="" class="shadow p-5">
+			{% csrf_token %}
+				<div class="mb-3">
+					<label for="exampleInputUserName" class="form-label">Username</label>
+					<input type="text" name="username" class="form-control" placeholder="username" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleInputFirstName" class="form-label">First Name</label>
+					<input type="text" name="fname" class="form-control" placeholder="firstname" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleInputLastName" class="form-label">Last Name</label>
+					<input type="text" name="lname" class="form-control" placeholder="lastname" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input type="email" name="email" class="form-control" placeholder="email" required>
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="password" name="pass1" class="form-control" placeholder="password" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+					<input type="password" name="pass2" class="form-control" placeholder="confirm password" required>
+				</div>
+
+				<div class="mb-3">
+					<!-- recaptcha div -->
+					<div class="g-recaptcha" data-sitekey="6Lc2kL0nAAAAALYjJdWmlRMcWLdZ8qgoNw6B-R0_"></div>
+				</div>
+				
+				<div class="d-grid"><button type="submit" class="btn btn-outline-primary btn-rounded">Sign up</button></div>
+				<br>
+				<div class="text-center text-primary fw-bold">
+					<small> Existing User ? <a href=" {% url 'login' %} " class="text-danger text-decoration-none"> Signin Now </a></small>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock main-content %}
+
+
+

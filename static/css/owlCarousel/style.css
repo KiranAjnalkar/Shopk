@@ -1,0 +1,49 @@
+.card .owl-carousel .item{
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;
+}
+.owl-carousel .item img .size{
+    height: 200px;
+}
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+@media screen and (max-width: 800px){
+    .owl-carousel .item{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+       }
+       .owl-carousel .item img .size{
+           height: 100px;
+           width: auto;
+       }
+       .owl-next{
+        float:right;
+       }
+       .owl-prev{
+        float:left;
+       }
+       .owl-prev span{
+        font-size: 14px;
+        font-weight: none;
+       }
+       .owl-next span{
+        font-size: 14px;
+        font-weight: none;
+       }
+}
+
+

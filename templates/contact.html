@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block title %} Contact {% endblock title %} 
+
+{% block main-content %}
+
+<div class="container-fluid">
+  <img src="/static/images/contact/contactUS.png" class="d-block w-100 h-25 px-5" alt="phone-contact img" />
+</div>
+<div class="container mt-5">
+  <h1>Contact US</h1>
+  <form method="post" action="/contact">
+  {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputFullname" class="form-label">Name</label>
+      <input type="fullname" class="form-control" id="exampleInputFullname" name="name" aria-describedby="nameHelp" required />
+      <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required />
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="desc">Tell me about what you want to contact me for</label>
+      <textarea class="form-control" id="desc" rows="3" name="desc" required></textarea>
+    </div>
+    <div class="mb-3">
+      <!-- recaptcha div -->
+      <div class="g-recaptcha" data-sitekey="6Lc2kL0nAAAAALYjJdWmlRMcWLdZ8qgoNw6B-R0_"></div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary btn-rounded">Submit</button>
+  </form>
+</div>
+<br/>
+
+{% endblock main-content %}
