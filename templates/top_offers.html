@@ -5,7 +5,7 @@
 {% block title %}Top Offers{%endblock title %} 
 
 {% block banner_slider %}
-
+{% comment %} 
 <div class="slideshow-container">
   <div class="mySlides1">
     <img src="/static/images/banner/top offers/top offers2.jpg" style="width: 100%" />
@@ -40,7 +40,7 @@
     }
     x[slideIndex[no] - 1].style.display = "block";
   }
-</script>
+</script> {% endcomment %}
 
 {% endblock banner_slider %} 
 
@@ -58,8 +58,8 @@
         {% for product in topoffers %}
         <div class="col-md-4 col-6 mb-4">
           <a href=" {% url 'product-detail' product.id %} " class="btn">
-            <div class="item">
-              <img src=" {{product.product_image.url}} " alt="" style="width: 140px; margin-top: 8px" height="auto" class="" />
+            <div class="item ani-img">
+              <img src=" {{product.product_image.url}} " alt="" style="width: 140px; margin-top: 8px" height="auto" class="" data-aos="zoom-in" />
               <div class="fw-bold">{{product.title}}</div>
               <div class="fw-bold"> {{product.discounted_price}} <small class="fw-light text-decoration-line-through"> {{product.selling_price}} </small>
               </div>

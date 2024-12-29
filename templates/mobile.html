@@ -5,7 +5,7 @@
 {% block title %} Mobile {% endblock title %}
 
 {% block banner_slider %}
-
+{% comment %} 
 <div class="slideshow-container">
     <div class="mySlides1">
         <img src="/static/images/banner/mobile/b1.jpg" style="width:100%">
@@ -36,7 +36,7 @@
         }
         x[slideIndex[no] - 1].style.display = "block";
     }
-</script> 
+</script>  {% endcomment %}
 
 {% endblock banner_slider %}
 
@@ -59,8 +59,8 @@
                 {% for product in mobiles %}
                 <div class="col-md-3 col-6 mb-4">
                     <a href=" {% url 'product-detail' product.id %} " class="btn">
-                        <div class="">
-                            <img src=" {{product.product_image.url}} " alt="" height="200" class="" >
+                        <div class="ani-img">
+                            <img src=" {{product.product_image.url}} " alt="" height="200" class="" data-aos="zoom-in">
                             <div class="fw-bold"> {{product.title}} </div>
                             <div class="fw-bold"> {{product.discounted_price}}
                                 <small class="fw-light text-decoration-line-through"> {{product.selling_price}}</small>

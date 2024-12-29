@@ -1,0 +1,18 @@
+.dropdown-item:hover {
+  background-color: #0056b3 !important;
+  color: white !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+ 

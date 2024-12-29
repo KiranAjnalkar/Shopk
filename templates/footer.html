@@ -1,3 +1,4 @@
+{% comment %}
 <div>
   <section>
     <footer class="text-center text-white" style="background-color: #0a4275">
@@ -10,7 +11,134 @@
           </p>
         </section>
       </div>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2022-2023 <a class="text-white" href="https://shopk.pythonanywhere.com/"> ShopK </a></div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2022-2023 <a class="text-white" href="https://shopk.pythonanywhere.com/"> ShopK </a></div>
     </footer>
   </section>
 </div>
+{% endcomment %} 
+
+
+{% comment %}
+<footer class="text-center text-lg-start bg-body-primary text-muted">
+  <section class="d-flex justify-content-center justify-content-lg-between border-bottom"></section>
+
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i>ShopK</h6>
+          <p>ShopK is a dynamic clothing retailer and wholesaler that specializes in offering the latest fashion trends for both individual consumers and businesses. Trend Pick provides bulk clothing solutions to boutiques, stores, and online retailers, offering competitive pricing and access to cutting-edge designs.</p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+          <p>
+            <a href="/about" style="text-decoration: none; color: #5a6269" onmouseover="this.style.color='black';" onmouseout="this.style.color='#5A6269';"> About Us </a>
+          </p>
+          <p>
+            <a href="/contact" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Contact US</a>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4" style="white-space: nowrap">Terms & Conditions</h6>
+          <p>
+            <a href="#!" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Privacy Policy</a>
+          </p>
+          <p>
+            <a href="#!" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Return policy</a>
+          </p>
+          <p>
+            <a href="#!" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Shiping</a>
+          </p>
+          <p>
+            <a href="#!" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Payment Methods</a>
+          </p>
+          <p>
+            <a href="#!" style="text-decoration: none; color: #6c757d" onmouseover="this.style.color='black';" onmouseout="this.style.color='#6C757D';">Terms & Conditions</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05); color: black">© 2023-2024, ShopK</div>
+</footer>
+{% endcomment %}
+
+
+
+<footer>
+  <div class="up-section">
+    <a href="#" class="f-logo" style="font-size: 25px; font-weight: bold;">ShopK</a>
+
+    <ul>
+      <h1>Company</h1>
+      {% comment %}
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Support</a></li>
+      {% endcomment %}
+
+      <li><a href="/topwear">Men's Top Wears</a></li>
+      <li><a href="/bottomwear">Men's Bottom Wears</a></li>
+      <li><a href="/mobile">Mobiles</a></li>
+      <li><a href="/laptop">Laptop</a></li>
+    </ul>
+
+    <ul>
+      <h1>About</h1>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Location</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="#">Our Services</a></li>
+    </ul>
+
+    <ul>
+      <h1>Contact us</h1>
+      <li><p>+91 123 456 7890</p></li>
+      <li><p>Solapur, Maharashtra,</p></li>
+      <li><p>India</p></li>
+    </ul>
+  </div>
+
+  <div class="down-section">
+    <ul>
+      <h1>Explore</h1>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Item Detail</a></li>
+      <li><a href="#">Collectibles</a></li>
+      <li><a href="#">Community</a></li>
+    </ul>
+
+    <ul>
+      <h1>Support</h1>
+      <li><a href="/contact">Contact us</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+
+    <div class="search">
+      <ul>
+        <h1>Register here...</h1>
+
+        <li><a href="/signup">Sign up!</a></li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <h1>Social</h1>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright"><span class="f-logo" style="font-size: 20px">ShopK,</span>Copyright 2023-2024</p>
+</footer>

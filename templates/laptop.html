@@ -5,7 +5,7 @@
 {% block title %} Laptop {% endblock title %}
 
 {% block banner_slider %}
-
+{% comment %} 
 <div class="slideshow-container">
     <div class="mySlides1">
         <img src="/static/images/banner/laptop/lenovo.jpg" style="width:100%; ">
@@ -35,7 +35,7 @@
         }
         x[slideIndex[no] - 1].style.display = "block";
     }
-</script> 
+</script>  {% endcomment %}
 
 {% endblock banner_slider %}
 
@@ -58,8 +58,8 @@
                 {% for product in laptops %}
                 <div class="col-md-4 col-6 mb-4">
                     <a href=" {% url 'product-detail' product.id %} " class="btn">
-                        <div class="item">
-                            <img src=" {{product.product_image.url}} " alt="" height="90" width="130" class="">
+                        <div class="item ani-img">
+                            <img src=" {{product.product_image.url}} " alt="" height="90" width="130" class="" data-aos="zoom-in">
                             <div class="fw-bold"> {{product.title}} </div>
                             <div class="fw-bold"> {{product.discounted_price}}
                                 <small class="fw-light text-decoration-line-through"> {{product.selling_price}}</small>

@@ -1,0 +1,105 @@
+:root {
+    /* --p: orange; */
+    --p: #0989ff;
+    --pl: #0989ff0a;
+    --h: #0870d0;
+   
+    --l: #999;
+    --s: #d5d8db;
+    --s: #ececec;
+    --green: #43a047;
+    --red: #c62828;
+    --yellow: #ffa000;
+    --bold: 500;
+    --normal: 500;
+    --f1: 'Fira Sans';
+    --f2: 'Fira Sans';
+    --f1: 'Jost';
+    --f2: 'Jost';
+}
+
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3366FF;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.5) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0.5) 75%,
+            transparent 75%,
+            transparent)
+}
+
+
+.back-to-top {
+    background: var(--p);
+    border-radius: 50px;
+    position: fixed;
+    bottom: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    right: 60px;
+    z-index: 1000;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.back-to-top i {
+    margin: 0; 
+}
+
+.back-to-top:hover {
+    background: var(--h);
+}
+
+
+/* Home page animations */
+
+.img-fluid {
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
+.card.item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Home page animations end */
+
+/* search, topoffer, bottom, top wear, laptop, mobile page animations */
+
+.ani-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ani-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* search, topoffer, bottom, top wear, laptop, mobile page animations end */

@@ -48,12 +48,12 @@
   <div class="card mb-3 mt-3" style="max-width: 100%;">
     <div class="row g-0">
       <div class="col-md-2">
-        <img src=" {% static 'images/owlCarousel/fashion.jpg' %} " class="img-fluid rounded-start" alt="...">
+        <img src=" {% static 'images/owlCarousel/fashion.jpg' %} " class="img-fluid rounded-start" alt="..." data-aos="zoom-in">
         <h5 class="card-title m-5 text-center"> Men's Top Wears </h5>
         <p class="card-text"> </p>
         <p class="card-text text-center"><a  href=" {% url 'topwear' %} "> <button type="button" class="btn btn-outline-primary btn-rounded"> VIEW ALL </button> </a> </p>
       </div>
-      <div class="col-md-10">
+      {% comment %} <div class="col-md-10">
         <div class="card-body">
           <div class="owl-carousel" id="slider1">
             {% for tp in topwears %}
@@ -64,19 +64,46 @@
             {% endfor %}
           </div>
         </div>
+      </div> {% endcomment %}
+
+      <div class="col-md-10">
+        <div class="card-body">
+          <div class="owl-carousel p-1" id="slider1">
+            {% for tp in topwears %}
+            <a href="{% url 'product-detail' tp.id %}" class="btn">
+              <div class="card item border border-light" style="background-color: whitesmoke; width: 100%; height: 320px;">
+                <div class="position-relative text-center">
+                  <img class="card-img-top mt-2" src="{{tp.product_image.url}}" alt="" style="height: 200px; width: auto; max-width: 100%; object-fit: contain; margin: auto;" data-aos="zoom-in" />
+                  {% comment %} <button class="btn btn-sm btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow" onclick="window.location.href=''">
+                    <i class="fas fa-heart text-danger"></i>
+                  </button> {% endcomment %}
+                </div>
+                <div class="card-body text-center p-2">
+                  <h6 class="card-title fw-bold text-dark">{{ tp.title }}</h6>
+                  <p class="text-decoration-line-through mb-1 fs-6 text-muted">Rs. {{ tp.selling_price }}</p>
+                  <p class="mb-1 fs-6 fw-bold text-dark">Rs. {{ tp.discounted_price }}</p>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
+
+
+
     </div>
   </div>
 
   <div class="card mb-3 mt-3" style="max-width: 100%;">
     <div class="row g-0">
       <div class="col-md-2">
-        <img src=" {% static 'images/owlCarousel/fashion.jpg' %} " class="img-fluid rounded-start" alt="...">
+        <img src=" {% static 'images/owlCarousel/fashion.jpg' %} " class="img-fluid rounded-start" alt="..." data-aos="zoom-in">
         <h5 class="card-title m-5 text-center"> Men's Bottom Wears </h5>
         <p class="card-text"> </p>
         <p class="card-text text-center"><a  href=" {% url 'bottomwear' %} "> <button type="button" class="btn btn-outline-primary btn-rounded"> VIEW ALL </button> </a> </p>
       </div>
-      <div class="col-md-10">
+      {% comment %} <div class="col-md-10">
         <div class="card-body">
           <div class="owl-carousel" id="slider2">
             {% for b in bottomwears %}
@@ -87,11 +114,38 @@
             {% endfor %}
           </div>
         </div>
+      </div> {% endcomment %}
+
+      <div class="col-md-10">
+        <div class="card-body">
+          <div class="owl-carousel p-1" id="slider2">
+            {% for b in bottomwears %}
+            <a href="{% url 'product-detail' b.id %}" class="btn">
+              <div class="card item border border-light" style="background-color: whitesmoke; width: 100%; height: 320px;">
+                <div class="position-relative text-center">
+                  <img class="card-img-top mt-2" src="{{b.product_image.url}}" alt="" style="height: 200px; width: auto; max-width: 100%; object-fit: contain; margin: auto;" data-aos="zoom-in" />
+                  {% comment %} <button class="btn btn-sm btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow" onclick="window.location.href=''">
+                    <i class="fas fa-heart text-danger"></i>
+                  </button> {% endcomment %}
+                </div>
+                <div class="card-body text-center p-2">
+                  <h6 class="card-title fw-bold text-dark">{{ b.title }}</h6>
+                  <p class="text-decoration-line-through mb-1 fs-6 text-muted">Rs. {{ b.selling_price }}</p>
+                  <p class="mb-1 fs-6 fw-bold text-dark">Rs. {{ b.discounted_price }}</p>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
+
+
+
     </div>
   </div>
   <!-- Payment Info Section -->
-  <div class="container my-3 resize1 ">
+  <div class="container my-3 resize1 " data-aos="zoom-in">
     <div class="row">
       <div class="col-sm-3">
         <div class="card mb-2">
@@ -124,15 +178,16 @@
     </div>
   </div> 
   <!-- End Payment Info Section -->
+
   <div class="card mb-3 mt-3" style="max-width: 100%;">
     <div class="row g-0">
       <div class="col-md-2">
-        <img src=" {% static 'images/owlCarousel/electronics.jpg' %} " class="img-fluid rounded-start" alt="...">
+        <img src=" {% static 'images/owlCarousel/electronics.png' %} " class="img-fluid rounded-start" alt="..." data-aos="zoom-in">
         <h5 class="card-title m-5 text-center"> Mobiles </h5>
         <p class="card-text"> </p>
-        <p class="card-text text-center"><a  href=" {% url 'mobile' %} "> <button type="button" class="btn btn-outline-primary btn-rounded mb-3"> VIEW ALL </button> </a> </p>
+        <p class="card-text text-center mb-3"><a  href=" {% url 'mobile' %} "> <button type="button" class="btn btn-outline-primary btn-rounded mb-3"> VIEW ALL </button> </a> </p>
       </div>
-      <div class="col-md-10">
+      {% comment %} <div class="col-md-10">
         <div class="card-body">
           <div class="owl-carousel p-1" id="slider3">
             {% for m in mobiles %}
@@ -142,19 +197,50 @@
             {% endfor %}
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
+
+<div class="col-md-10">
+  <div class="card-body">
+    <div class="owl-carousel p-1" id="slider3">
+      {% for m in mobiles %}
+      <a href="{% url 'product-detail' m.id %}" class="btn">
+        <div class="card item border border-light" style="background-color: whitesmoke; width: 150px; height: 270px;">
+          <div class="position-relative text-center">
+            <img class="card-img-top mt-2" src="{{m.product_image.url}}" alt="" style="height: 150px; width: auto; max-width: 100%; object-fit: contain; margin: auto;" data-aos="zoom-in" />
+            {% comment %} <button class="btn btn-sm btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow" onclick="window.location.href=''">
+              <i class="fas fa-heart text-danger"></i>
+            </button> {% endcomment %}
+          </div>
+          <div class="card-body text-center p-2">
+            <h6 class="card-title fw-bold text-dark">{{ m.title }}</h6>
+            <p class="text-decoration-line-through mb-1 fs-6 text-muted">Rs. {{ m.selling_price }}</p>
+            <p class="mb-1 fs-6 fw-bold text-dark">Rs. {{ m.discounted_price }}</p>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
     </div>
   </div>
 
-  <div class="card mb-3 mt-3" style="max-width: 100%;">
+  <div class="card mt-3" style="max-width: 100%;">
     <div class="row g-0">
       <div class="col-md-2">
-        <img src=" {% static 'images/owlCarousel/electronics.jpg' %} " class="img-fluid rounded-start" alt="...">
+        <img src=" {% static 'images/owlCarousel/electronics.png' %} " class="img-fluid rounded-start" alt="..." data-aos="zoom-in">
         <h5 class="card-title m-4 text-center"> Laptop </h5>
         <p class="card-text"> </p>
         <p class="card-text text-center mb-3"><a  href=" {% url 'laptop' %} "> <button type="button" class="btn btn-outline-primary btn-rounded"> VIEW ALL </button> </a> </p>
       </div>
-      <div class="col-md-10">
+      {% comment %} <div class="col-md-10">
         <div class="card-body">
           <div class="owl-carousel" id="slider4">
             {% for l in laptops %}
@@ -164,7 +250,63 @@
             {% endfor %}
           </div>
         </div>
+      </div>  {% endcomment %}
+
+      <div class="col-md-10">
+        <div class="card-body">
+          <div class="owl-carousel" id="slider4">
+            {% for l in laptops %}
+            <a href="{% url 'product-detail' l.id %}" class="btn">
+              <div class="card item border border-light" style="background-color: whitesmoke;">
+                <div class="position-relative">
+                  <img src="{{l.product_image.url}}" class="card-img-top p-3" alt="" style="height: 150px; object-fit: contain;" data-aos="zoom-in" />
+                  {% comment %} <button class="btn btn-sm btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow" onclick="window.location.href=' '">
+                    <i class="fas fa-heart text-danger"></i>
+                  </button> {% endcomment %}
+                </div>
+                <div class="card-body text-center p-2">
+                  <h6 class="card-title fw-bold text-dark">{{ l.title }}</h6>
+                  <p class="text-decoration-line-through mb-1 fs-6 text-muted">Rs. {{ l.selling_price }}</p>
+                  <p class="mb-1 fs-6 fw-bold text-dark">Rs. {{ l.discounted_price }}</p>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
+
+
+
+      {% comment %} <div class="col-md-10">
+        <div class="card-body">
+          <div class="owl-carousel" id="slider4">
+            {% for l in laptops %}
+            <a href="{% url 'product-detail' l.id %}" class="btn">
+              <div class="card item border-0">
+                <div class="position-relative">
+                  <img src="{{l.product_image.url}}" class="card-img-top p-3" alt="" style="height: 150px; object-fit: contain;" />
+                  <a href="" class="btn btn-sm btn-light position-absolute top-0 end-0 m-2 rounded-circle shadow wishlist-btn">
+                    <i class="fas fa-heart text-danger"></i>
+                  </a>
+                </div>
+                <div class="card-body text-center p-2">
+                  <h6 class="card-title fw-bold text-dark">{{ l.title }}</h6>
+                  <p class="text-decoration-line-through mb-1 fs-6 text-muted">Rs. {{ l.selling_price }}</p>
+                  <p class="mb-1 fs-6 fw-bold text-dark">Rs. {{ l.discounted_price }}</p>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div> {% endcomment %}
+
+
+
+
+
+
     </div>
   </div>
 

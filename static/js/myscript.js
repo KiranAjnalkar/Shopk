@@ -4,7 +4,7 @@ $('#slider1, #slider2, #slider3, #slider4').owlCarousel({
     responsiveClass: true,
     responsive: {
         0: {
-            items: 3,
+            items: 2,
             nav: false,
             autoplay: true,
         },
@@ -14,7 +14,7 @@ $('#slider1, #slider2, #slider3, #slider4').owlCarousel({
             autoplay: true,
         },
         1000: {
-            items: 6,
+            items: 5,
             nav: true,
             loop: true,
             autoplay: true,
@@ -86,4 +86,3 @@ $('.remove-cart').click(function() {
         }
     });
 });
-
